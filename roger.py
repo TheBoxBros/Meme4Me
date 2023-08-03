@@ -2,6 +2,7 @@ from mic import take_command
 from rec import talk
 import wikipedia
 import pywhatkit
+import pyjokes
 
 def run_roger():
 	command = take_command()
@@ -18,7 +19,7 @@ def run_roger():
 		info = wikipedia.summary(person, 1)
 		print(info)
 		talk(info)
-	elif 'date' in command:
+	elif 'Are you sick' in command:
 		talk('sorry, I have a headache')
 	elif 'joke' in command:
 		talk(pyjokes.get_joke())
